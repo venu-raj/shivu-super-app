@@ -7,6 +7,7 @@ class PartnerModel {
   final int price;
   final String priceInWords;
   final String id;
+  final String uid;
 
   PartnerModel({
     required this.partnertitle,
@@ -14,6 +15,7 @@ class PartnerModel {
     required this.price,
     required this.priceInWords,
     required this.id,
+    required this.uid,
   });
 
   PartnerModel copyWith({
@@ -22,6 +24,7 @@ class PartnerModel {
     int? price,
     String? priceInWords,
     String? id,
+    String? uid,
   }) {
     return PartnerModel(
       partnertitle: partnertitle ?? this.partnertitle,
@@ -29,6 +32,7 @@ class PartnerModel {
       price: price ?? this.price,
       priceInWords: priceInWords ?? this.priceInWords,
       id: id ?? this.id,
+      uid: uid ?? this.uid,
     );
   }
 
@@ -39,17 +43,18 @@ class PartnerModel {
       'price': price,
       'priceInWords': priceInWords,
       'id': id,
+      'uid': uid,
     };
   }
 
   factory PartnerModel.fromMap(Map<String, dynamic> map) {
     return PartnerModel(
       partnertitle: map['partnertitle'] as String,
-      dateCreated:
-          DateTime.fromMillisecondsSinceEpoch(map['dateCreated'] as int),
+      dateCreated: DateTime.fromMillisecondsSinceEpoch(map['dateCreated'] as int),
       price: map['price'] as int,
       priceInWords: map['priceInWords'] as String,
       id: map['id'] as String,
+      uid: map['uid'] as String,
     );
   }
 
@@ -60,26 +65,29 @@ class PartnerModel {
 
   @override
   String toString() {
-    return 'PartnerModel(partnertitle: $partnertitle, dateCreated: $dateCreated, price: $price, priceInWords: $priceInWords, id: $id)';
+    return 'PartnerModel(partnertitle: $partnertitle, dateCreated: $dateCreated, price: $price, priceInWords: $priceInWords, id: $id, uid: $uid)';
   }
 
   @override
   bool operator ==(covariant PartnerModel other) {
     if (identical(this, other)) return true;
-
-    return other.partnertitle == partnertitle &&
-        other.dateCreated == dateCreated &&
-        other.price == price &&
-        other.priceInWords == priceInWords &&
-        other.id == id;
+  
+    return 
+      other.partnertitle == partnertitle &&
+      other.dateCreated == dateCreated &&
+      other.price == price &&
+      other.priceInWords == priceInWords &&
+      other.id == id &&
+      other.uid == uid;
   }
 
   @override
   int get hashCode {
     return partnertitle.hashCode ^
-        dateCreated.hashCode ^
-        price.hashCode ^
-        priceInWords.hashCode ^
-        id.hashCode;
+      dateCreated.hashCode ^
+      price.hashCode ^
+      priceInWords.hashCode ^
+      id.hashCode ^
+      uid.hashCode;
   }
 }

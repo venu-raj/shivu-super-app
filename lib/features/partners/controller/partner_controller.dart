@@ -29,11 +29,13 @@ class PartnerController extends StateNotifier<bool> {
     required int price,
     required String priceInWords,
     required BuildContext context,
+    required String uid,
   }) async {
     final res = await partnerRepository.sendParterDetails(
       partnertitle: partnertitle,
       price: price,
       priceInWords: priceInWords,
+      uid: uid,
     );
 
     res.fold(

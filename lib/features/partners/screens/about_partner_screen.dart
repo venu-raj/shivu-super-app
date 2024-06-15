@@ -58,6 +58,7 @@ class _AboutPartnerScreenState extends ConsumerState<AboutPartnerScreen> {
           partnertitle: partnertitle,
           price: price,
           priceInWords: priceInWords,
+          uid: ref.watch(userProvider)!.uid,
           context: context,
         );
     ref

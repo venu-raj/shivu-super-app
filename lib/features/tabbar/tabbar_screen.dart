@@ -33,20 +33,20 @@ class _TabbarScreenState extends ConsumerState<TabbarScreen>
   @override
   void initState() {
     super.initState();
-    tabBarController = TabController(length: 6, vsync: this);
+    tabBarController = TabController(length: 5, vsync: this);
     WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 6,
+      length: 5,
       initialIndex: currentIndex,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
           centerTitle: false,
-          title: const Text("APP LOGO"),
+          title: const Text("World Wide Web"),
           actions: [
             IconButton(
               onPressed: () {},
@@ -73,9 +73,9 @@ class _TabbarScreenState extends ConsumerState<TabbarScreen>
               Tab(
                 icon: Icon(CupertinoIcons.house_fill),
               ),
-              Tab(
-                icon: Icon(CupertinoIcons.play_rectangle_fill),
-              ),
+              // Tab(
+              //   icon: Icon(CupertinoIcons.play_rectangle_fill),
+              // ),
               Tab(
                 icon: Icon(Icons.sports_baseball_outlined),
               ),
@@ -95,7 +95,6 @@ class _TabbarScreenState extends ConsumerState<TabbarScreen>
           controller: tabBarController,
           children: const [
             HomeScreen(),
-            // StreamingScreen(),
             SportsNewsScreen(),
             NewsFeedForTabScreen(),
             PincodeNewsScreen(),

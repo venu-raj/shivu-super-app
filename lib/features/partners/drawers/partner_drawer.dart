@@ -7,6 +7,7 @@ import 'package:shiv_super_app/features/auth/controller/auth_controller.dart';
 import 'package:shiv_super_app/features/partners/controller/partner_controller.dart';
 import 'package:shiv_super_app/features/partners/screens/about_partner_screen.dart';
 import 'package:shiv_super_app/features/partners/screens/add_team_screen.dart';
+import 'package:shiv_super_app/features/partners/screens/partner_details_screen.dart';
 
 class PartnerListDrawer extends ConsumerWidget {
   const PartnerListDrawer({super.key});
@@ -69,13 +70,13 @@ class PartnerListDrawer extends ConsumerWidget {
                           return ListTile(
                             title: Text(team.name),
                             onTap: () {
-                              // Navigator.of(context).push(
-                              //   CupertinoPageRoute(
-                              //     builder: (context) => PartnerDetailsScreen(
-                              //       teamsModel: team,
-                              //     ),
-                              //   ),
-                              // );
+                              Navigator.of(context).push(
+                                CupertinoPageRoute(
+                                  builder: (context) => PartnerDetailsScreen(
+                                    teamsModel: team,
+                                  ),
+                                ),
+                              );
                             },
                             subtitle: Text(team.department),
                             trailing: Icon(Icons.arrow_forward_ios),

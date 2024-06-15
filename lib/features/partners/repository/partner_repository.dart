@@ -22,6 +22,7 @@ class PartnerRepository {
     required String partnertitle,
     required int price,
     required String priceInWords,
+    required String uid,
   }) async {
     try {
       final id = const Uuid().v1();
@@ -31,6 +32,7 @@ class PartnerRepository {
         price: price,
         id: id,
         priceInWords: priceInWords,
+        uid: uid,
       );
 
       await firestore.collection("partners").doc(id).set(partnerModel.toMap());
@@ -87,6 +89,7 @@ class PartnerRepository {
         number: number,
         id: id,
         department: department,
+        uid: uid,
       );
 
       await firestore
@@ -108,6 +111,7 @@ class PartnerRepository {
         .collection('users')
         .doc(uid)
         .collection("Teams")
+        .where('uid', isEqualTo: uid)
         .snapshots()
         .map(
           (event) => event.docs

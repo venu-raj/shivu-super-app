@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shiv_super_app/features/OLX/screens/olx_feed_screen.dart';
 import 'package:shiv_super_app/features/ads/ads_screen.dart';
 import 'package:shiv_super_app/features/jobs/screens/job_seeker/screens/job_feed_screen.dart';
+import 'package:shiv_super_app/features/movies/screens/streaming_screen.dart';
 import 'package:shiv_super_app/features/news/screens/news_feed_screen.dart';
 import 'package:shiv_super_app/features/shopping/screens/shopping_category_screen.dart';
 import 'package:shiv_super_app/features/tweets/screens/tweet_feed_sceen.dart';
@@ -267,11 +268,11 @@ List<HomeContent> homeContents = [
     imagePath: "assets/home/news.png",
     screen: const NewsFeedScreen(),
   ),
-  // HomeContent(
-  //   title: "Bills",
-  //   imagePath: "assets/home/news.png",
-  //   screen: const JobFeedScreen(),
-  // ),
+  HomeContent(
+    title: "Movies",
+    imagePath: "assets/home/news.png",
+    screen: MoviesScreen(),
+  ),
   HomeContent(
     title: "OLX",
     imagePath: "assets/home/OLX_Logo.jpg",

@@ -8,6 +8,7 @@ class TeamsModel {
   final int number;
   final String id;
   final String department;
+  final String uid;
 
   TeamsModel({
     required this.name,
@@ -16,6 +17,7 @@ class TeamsModel {
     required this.number,
     required this.id,
     required this.department,
+    required this.uid,
   });
 
   TeamsModel copyWith({
@@ -25,6 +27,7 @@ class TeamsModel {
     int? number,
     String? id,
     String? department,
+    String? uid,
   }) {
     return TeamsModel(
       name: name ?? this.name,
@@ -33,6 +36,7 @@ class TeamsModel {
       number: number ?? this.number,
       id: id ?? this.id,
       department: department ?? this.department,
+      uid: uid ?? this.uid,
     );
   }
 
@@ -44,6 +48,7 @@ class TeamsModel {
       'number': number,
       'id': id,
       'department': department,
+      'uid': uid,
     };
   }
 
@@ -56,6 +61,7 @@ class TeamsModel {
       number: map['number'] as int,
       id: map['id'] as String,
       department: map['department'] as String,
+      uid: map['uid'] as String,
     );
   }
 
@@ -66,7 +72,7 @@ class TeamsModel {
 
   @override
   String toString() {
-    return 'TeamsModel(name: $name, email: $email, dateCreated: $dateCreated, number: $number, id: $id, department: $department)';
+    return 'TeamsModel(name: $name, email: $email, dateCreated: $dateCreated, number: $number, id: $id, department: $department, uid: $uid)';
   }
 
   @override
@@ -78,7 +84,8 @@ class TeamsModel {
         other.dateCreated == dateCreated &&
         other.number == number &&
         other.id == id &&
-        other.department == department;
+        other.department == department &&
+        other.uid == uid;
   }
 
   @override
@@ -88,6 +95,7 @@ class TeamsModel {
         dateCreated.hashCode ^
         number.hashCode ^
         id.hashCode ^
-        department.hashCode;
+        department.hashCode ^
+        uid.hashCode;
   }
 }
