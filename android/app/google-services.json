@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1004277212557",
+    "project_id": "shivsuperapp",
+    "storage_bucket": "shivsuperapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004277212557:android:0fb8878e1d4ff6b22449c4",
+        "android_client_info": {
+          "package_name": "com.example.shiv_super_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004277212557-7pqaqves0fsrjrv7nhevaieb70m4pgvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shiv_super_app",
+            "certificate_hash": "9734d988f3b81c3d5261f9371af139f154278f96"
+          }
+        },
+        {
+          "client_id": "1004277212557-1g33asb2tnd2v4dnf3nt6pak7h66k7ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsWS2MBpxfcgJcgxDDMshnlkaG7LFtx78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004277212557-1g33asb2tnd2v4dnf3nt6pak7h66k7ar.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1004277212557-l69cuuf42sho0gtkr21cgv4he4v208g7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shivSuperApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
